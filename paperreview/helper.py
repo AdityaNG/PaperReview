@@ -89,14 +89,17 @@ def ask_paper_text(
     model: str = "text-davinci-003",
     max_tokens: int = 1000,
     temperature: float = 0.5,
-):
+):  # pragma: no cover
     """
-    Ask a question about a research paper using GPT-4.
+    Ask a question about a research paper using GPT.
     """
     openai.api_key = api_key
 
     summary = ""
-    for text_segment in tqdm(ChunkIterator(text, 3000, model)):
+    for text_segment in tqdm(
+        ChunkIterator(text, 3000, model),
+        desc="Reading paper",
+    ):
         prompt = f"Following is a segment of a Research Paper. \
             Answer the question that follows. \n\n{text_segment} \
             \n\n{question} ; Only use bullet points. \

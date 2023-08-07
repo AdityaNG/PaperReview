@@ -5,7 +5,21 @@ from paperreview.helper import (
     ChunkIterator,
 )
 
+from paperreview.constants import str_default
+
 ATTENTION_PAPER = "https://arxiv.org/pdf/1706.03762.pdf"
+# ATTENTION_PAPER = "https://openreview.net/pdf?id=q4pQkTlImdk"
+
+
+def test_main():
+    from paperreview.cli import main
+
+    del main
+
+
+def test_str_default():
+    assert str_default("1", "2") == "1"
+    assert str_default(None, "2") == "2"
 
 
 def test_extract_text_from_pdf():
