@@ -3,7 +3,7 @@
 [![codecov](https://codecov.io/gh/AdityaNG/PaperReview/branch/main/graph/badge.svg?token=PaperReview_token_here)](https://codecov.io/gh/AdityaNG/PaperReview)
 [![CI](https://github.com/AdityaNG/PaperReview/actions/workflows/main.yml/badge.svg)](https://github.com/AdityaNG/PaperReview/actions/workflows/main.yml)
 
-paperreview created by AdityaNG
+A python module to help read and summarize research papers.
 
 ## Install it from PyPI
 
